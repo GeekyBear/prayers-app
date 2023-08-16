@@ -26,12 +26,12 @@ export default function App() {
   const fetchData = () => {
     setIsLoading(true);
 
-    const baseURL = "http://192.168.100.200:3001/prays";
+    const baseURL = "https://prayers-api.onrender.com/prayers";
 
     try {
       axios
         .get(`${baseURL}`)
-        .then((response) => setData(response.data.data))
+        .then((response) => setData(response.data))
         .catch((error) => console.log(error));
     } catch (error) {
       console.log(error);

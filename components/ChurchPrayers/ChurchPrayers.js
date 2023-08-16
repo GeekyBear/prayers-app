@@ -14,7 +14,6 @@ const width = Dimensions.get("window").width; //full width
 const height = Dimensions.get("window").height; //full height
 
 export default function ChurchPrayers({ data, isLoading }) {
-  console.log(data);
   return (
     <View style={styles.container}>
       <View style={styles.header}>
