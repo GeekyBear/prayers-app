@@ -49,6 +49,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
+      <Text>IBPC LOGO</Text>
       <Tab.Navigator
         screenOptions={{
           tabBarShowLabel: false,

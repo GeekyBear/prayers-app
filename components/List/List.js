@@ -5,7 +5,7 @@ import Separator from "../Separator/Separator";
 
 const width = Dimensions.get("window").width; //full width
 
-export default function List({ data }) {
+export default function List({ data, setOpenPrayer, setCurrentPrayer }) {
   return (
     <>
       <FlatList
@@ -13,7 +13,14 @@ export default function List({ data }) {
         data={data}
         ItemSeparatorComponent={Separator}
         renderItem={({ item }) =>
-          item.isApproved && <PrayTitle title={item.title} />
+          item.isApproved && (
+            <PrayTitle
+              setOpenPrayer={setOpenPrayer}
+              setCurrentPrayer={setCurrentPrayer}
+              title={item.title}
+              item={item}
+            />
+          )
         }
         keyExtractor={(item) => item.id}
       />
